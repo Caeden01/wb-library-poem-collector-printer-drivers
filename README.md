@@ -74,7 +74,7 @@ Follow the tutorial videos for disassembly:
     DESC="Thermal Print Project"
     NAME=thermal_print_project
     DAEMON=/usr/bin/python3
-    DAEMON_ARGS="FILE_DIRECTORY_PWD_GAVE_YOU/project.py"
+    DAEMON_ARGS="FILE_DIRECTORY_PWD_GAVE_YOU/main.py"
     PIDFILE=/var/run/$NAME.pid
     SCRIPTNAME=/etc/init.d/$NAME
 
