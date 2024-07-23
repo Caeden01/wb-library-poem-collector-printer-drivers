@@ -42,10 +42,12 @@ Follow the tutorial videos for disassembly:
     cd ./wb-library-poem-collector-printer-drivers
     ```
 4. Get the file path:
-  ```pwd```
+  ```bash
+    pwd
+    ```
    Copy this path for the next step.
 
-5. Create and edit the init script:
+6. Create and edit the init script:
     ```bash
     sudo nano /etc/init.d/thermal_print_project
     ```
@@ -130,7 +132,7 @@ Follow the tutorial videos for disassembly:
     exit 0
     ```
 
-6. Make the script executable and set it to run at startup:
+7. Make the script executable and set it to run at startup:
     ```bash
     sudo chmod +x /etc/init.d/thermal_print_project
     sudo update-rc.d thermal_print_project defaults
@@ -142,3 +144,4 @@ Follow the tutorial videos for disassembly:
 - [ ] Improve startup procedure - The script often crashes the first time it runs at boot.
 - [ ] Enhance error message response system - Add more LED error codes for better diagnostics.
 - [ ] Implement server-side error reporting - Enable direct reporting of error issues to the poem collector site.
+- [ ] Write drivers for other printers
