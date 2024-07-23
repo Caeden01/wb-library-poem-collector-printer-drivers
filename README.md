@@ -20,6 +20,12 @@ Follow the tutorial videos for disassembly:
 
 3. Obtain an LED light. Wire the + side of the LED light to GPIO Port 14. Negative can plug into any ground GPIO port.
 
+4. Stuff the Raspberry PI under the printer circuit board and reassemble.
+
+   ![Armature photo of assembly](https://github.com/user-attachments/assets/3afc05e9-4a82-406d-9a03-2057b6c1da55)
+
+**Tip:** Covering solder connections in hot glue helps maintain the connectivity of the joint in the long term. 
+
 **Warning:** With this setup, the Raspberry Pi will only boot up if the printer is connected to power through the USB-C port. Additionally, because the Raspberry Pi is connected to the printer's power button, the printer will refuse to power off if power is removed from USB-C. To address this, consider soldering a separate print button that is independent of the printer’s main power button. If this arrangement doesn't pose a problem for you, you can simply follow the steps above.
 
 ## Set up instructions software - Tested on Raspberry Pi Zero W
