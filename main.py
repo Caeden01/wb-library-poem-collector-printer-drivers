@@ -1,6 +1,7 @@
 # Please modify to meet your application
 PRINTER_MAC_ADDRESS = "YOUR MAC ADDRESS"
 WEB_ADDRESS = "YOUR_WEBSITE.COM/YOUR_PROJECT_PATH/picture_generator.php?auth_token=YOUR_AUTH_TOKEN"
+NAME_OF_PRINTER = "MX06"
 
 # Original import statements
 print("Application Opened. Loading imports...")
@@ -103,7 +104,7 @@ printer.speed = 180
 printer.quality = 40
 
 try:
-    printer.connect(name="MX06", address=PRINTER_MAC_ADDRESS)
+    printer.connect(name=NAME_OF_PRINTER, address=PRINTER_MAC_ADDRESS)
 except:
     set_led_pattern("-.-", "error")
     raise SystemExit("Cannot actively connect to bluetooth")
