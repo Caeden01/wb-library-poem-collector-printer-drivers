@@ -41,11 +41,10 @@ Follow the tutorial videos for disassembly:
     git clone https://github.com/Caeden01/wb-library-poem-collector-printer-drivers
     cd ./wb-library-poem-collector-printer-drivers
     ```
-4. Get the file path:
+4. Get the directory path (copy this pls!!):
     ```bash
     pwd
     ```
-    Copy this path for the next step.
    
 6. Create and edit the init script:
     ```bash
