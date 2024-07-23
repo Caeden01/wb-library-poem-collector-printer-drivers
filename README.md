@@ -44,7 +44,7 @@ Follow the tutorial videos for disassembly:
 4. Get the file path:
   ```bash
     pwd
-    ```
+  ```
    Copy this path for the next step.
 
 6. Create and edit the init script:
