@@ -47,7 +47,11 @@ Follow the tutorial videos for disassembly:
     git clone https://github.com/Caeden01/wb-library-poem-collector-printer-drivers
     cd ./wb-library-poem-collector-printer-drivers
     ```
-4. Get the directory path (copy this pls!!):
+4. Update the constants in "main.py"
+    ```bash
+    nano ./main.py
+    ```
+5. Get the directory path (copy this pls!!):
     ```bash
     pwd
     ```
@@ -143,6 +147,10 @@ Follow the tutorial videos for disassembly:
     sudo update-rc.d thermal_print_project defaults
     sudo reboot
     ```
+
+# Printer In Action
+
+https://github.com/user-attachments/assets/f5096c9a-a69f-4cb5-ac02-a710ecd7a329
 
 ## TO DO
 
