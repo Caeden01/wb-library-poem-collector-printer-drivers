@@ -4,7 +4,7 @@ Printer Driver compatible with GB01, GB02, GB03, GT01, YT01, MX05, MX06, MX08, o
 
 Built on the: [Cat-Printer](https://github.com/NaitLee/Cat-Printer)
 
-## Set up instructions hardware
+## Hardware Setup Instructions:
 
 Follow the tutorial videos for disassembly:
 - [Video 1](https://www.youtube.com/watch?v=bvEZYjWYKA4)
@@ -28,7 +28,7 @@ Follow the tutorial videos for disassembly:
 
 **Warning:** With this setup, the Raspberry Pi will only boot up if the printer is connected to power through the USB-C port. Additionally, because the Raspberry Pi is connected to the printer's power button, the printer will refuse to power off if power is removed from USB-C. To address this, consider soldering a separate print button that is independent of the printer’s main power button. If this arrangement doesn't pose a problem for you, you can simply follow the steps above.
 
-## Set up instructions software - Tested on Raspberry Pi Zero W
+## Software Setup Instructions
 
 1. Make sure your GPIO ports are enabled on your Pi:
     ```bash
