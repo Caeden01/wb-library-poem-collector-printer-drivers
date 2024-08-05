@@ -44,6 +44,7 @@ Follow the tutorial videos for disassembly:
 
 3. Clone the repository:
     ```bash
+    cd ~/
     git clone https://github.com/Caeden01/wb-library-poem-collector-printer-drivers
     cd ./wb-library-poem-collector-printer-drivers
     ```
@@ -51,12 +52,8 @@ Follow the tutorial videos for disassembly:
     ```bash
     nano ./main.py
     ```
-5. Get the directory path (copy this pls!!):
-    ```bash
-    pwd
-    ```
    
-6. Create and edit the init script:
+5. Create and edit the init script:
     ```bash
     sudo nano /etc/init.d/thermal_print_project
     ```
@@ -78,7 +75,7 @@ Follow the tutorial videos for disassembly:
     DESC="Thermal Print Project"
     NAME=thermal_print_project
     DAEMON=/usr/bin/python3
-    DAEMON_ARGS="FILE_DIRECTORY_PWD_GAVE_YOU/main.py"
+    DAEMON_ARGS="~/wb-library-poem-collector-printer-drivers/main.py"
     PIDFILE=/var/run/$NAME.pid
     SCRIPTNAME=/etc/init.d/$NAME
 
