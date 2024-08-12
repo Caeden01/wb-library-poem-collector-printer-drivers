@@ -56,7 +56,7 @@ Follow the tutorial videos for disassembly:
 5. Create and edit the init script:
     ```bash
     sudo nano /etc/init.d/poem_project
-    ```
+    ```bash
    Add the following content:
    # Function to check if the service is running
    is_service_running() {
