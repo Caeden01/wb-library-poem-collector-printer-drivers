@@ -57,8 +57,8 @@ Follow the tutorial videos for disassembly:
     ```bash
     sudo nano /etc/init.d/poem_project
     ```
+    Add the following content:
     ```bash
-   Add the following content:
    # Function to check if the service is running
    is_service_running() {
        pgrep -f "/usr/bin/python3 -- /home/$USER/wb-library-poem-collector-printer-drivers/main.py" >/dev/null
