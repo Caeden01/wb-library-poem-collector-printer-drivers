@@ -55,93 +55,60 @@ Follow the tutorial videos for disassembly:
    
 5. Create and edit the init script:
     ```bash
-    sudo nano /etc/init.d/thermal_print_project
+    sudo nano /etc/init.d/poem_project
     ```
    Add the following content:
-
-    ```bash
-    #!/bin/sh
-    ### BEGIN INIT INFO
-    # Provides:          thermal_print_project
-    # Required-Start:    $remote_fs $syslog
-    # Required-Stop:     $remote_fs $syslog
-    # Default-Start:     2 3 4 5
-    # Default-Stop:      0 1 6
-    # Short-Description: Start thermal print project at boot time
-    # Description:       Enable service provided by thermal print project.
-    ### END INIT INFO
-
-    PATH=/sbin:/usr/sbin:/bin:/usr/bin
-    DESC="Thermal Print Project"
-    NAME=thermal_print_project
-    DAEMON=/usr/bin/python3
-    DAEMON_ARGS="~/wb-library-poem-collector-printer-drivers/main.py"
-    PIDFILE=/var/run/$NAME.pid
-    SCRIPTNAME=/etc/init.d/$NAME
-
-    # Function to start the service
-    start_service() {
-        echo "Starting $DESC"
-        start-stop-daemon --start --background --make-pidfile --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_ARGS
-    }
-
-    # Function to stop the service
-    stop_service() {
-        echo "Stopping $DESC"
-        start-stop-daemon --stop --pidfile $PIDFILE
-    }
-
-    # Function to check if the service is running
-    is_service_running() {
-        pgrep -x "$NAME" >/dev/null
-    }
-
-    case "$1" in
-      start)
-        start_service
-        ;;
-      stop)
-        stop_service
-        ;;
-      restart)
-        stop_service
-        sleep 1
-        start_service
-        ;;
-      status)
-        if is_service_running
-        then
-            echo "$NAME is running"
-            exit 0
-        else
-            echo "$NAME is not running"
-            exit 1
-        fi
-        ;;
-      *)
-        echo "Usage: $SCRIPTNAME {start|stop|restart|status}" >&2
-        exit 3
-        ;;
-    esac
-
-    # Continuous monitoring and restarting loop
-    while true
-    do
-        sleep 1
-        if ! is_service_running
-        then
-            echo "$NAME has exited unexpectedly, restarting..."
-            start_service
-        fi
-    done
-
-    exit 0
+   # Function to check if the service is running
+   is_service_running() {
+       pgrep -f "/usr/bin/python3 -- /home/$USER/wb-library-poem-collector-printer-drivers/main.py" >/dev/null
+   }
+   
+   case "$1" in
+     start)
+       start_service
+       ;;
+     stop)
+       stop_service
+       ;;
+     restart)
+       stop_service
+       sleep 1
+       start_service
+       ;;
+     status)
+       if is_service_running
+       then
+           echo "$NAME is running"
+           exit 0
+       else
+           echo "$NAME is not running"
+           exit 1
+       fi
+       ;;
+     *)
+       echo "Usage: $SCRIPTNAME {start|stop|restart|status}" >&2
+       exit 3
+       ;;
+   esac
+   
+   # Continuous monitoring and restarting loop
+   while true
+   do
+       sleep 1
+       if ! is_service_running
+       then
+           echo "$NAME has exited unexpectedly, restarting..."
+           start_service
+       fi
+   done
+   
+   exit 0
     ```
 
 7. Make the script executable and set it to run at startup:
     ```bash
-    sudo chmod +x /etc/init.d/thermal_print_project
-    sudo update-rc.d thermal_print_project defaults
+    sudo chmod +x /etc/init.d/poem_project
+    sudo update-rc.d poem_project defaults
     sudo reboot
     ```
 
