@@ -19,7 +19,7 @@
 3. Clone the repository:
     ```bash
     cd ~/
-    git clone https://github.com/Caeden01/wb-library-poem-collector-printer-drivers
+    git clone -b "Adafruit-Driver" https://github.com/Caeden01/wb-library-poem-collector-printer-drivers/
     cd ./wb-library-poem-collector-printer-drivers
     ```
 
