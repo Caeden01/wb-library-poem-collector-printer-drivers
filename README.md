@@ -120,6 +120,7 @@ https://github.com/user-attachments/assets/f5096c9a-a69f-4cb5-ac02-a710ecd7a329
 ## TO DO
 
 - [ ] Improve startup procedure - The script often crashes the first time it runs at boot.
+- [ ] Replace init.d start up system with a systemctl start up system 
 - [ ] Enhance error message response system - Add more LED error codes for better diagnostics.
 - [ ] Implement server-side error reporting - Enable direct reporting of error issues to the poem collector site.
 - [ ] Rewrite in Rust or C++ for added speed efficiency. 
